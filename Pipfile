@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[scripts]
+test = "pytest -vvv"
+flake = "flake8 manipulations test"
+fmt = "black manipulations test"
+
+[packages]
+
+[dev-packages]
+pytest = "*"
+black = "*"
+flake8 = "*"
+
+[requires]
+python_version = "3.12"
