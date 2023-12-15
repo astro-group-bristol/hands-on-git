@@ -2,15 +2,14 @@ from typing import TypeVar
 
 T = TypeVar("T")
 
-def is_fizz_buzz(n: int) -> bool:
-    """
-    Check if a number is divisible by 3 or 5
-    """
-    is_divisible_by_3 = n % 3 == 0
-    is_divisible_by_5 = n % 5 == 0
-    return is_divisible_by_3 or is_divisible_by_5 and not (is_divisible_by_3 and is_divisible_by_5)
 
-def fizz_buzz_access(items: list) -> list:
+def _is_fizz_buzz(i: int) -> bool:
+    is_div_3 = i % 3 == 0
+    is_div_5 = i % 5 == 0
+
+    return (is_div_3 or is_div_5) and not (is_div_3 and is_div_5)
+
+def fizz_buzz_access(items: list[T]) -> list[T]:
     """
     Access the list according to the fizz-buzz pattern, that is, elements
     are included if the index
