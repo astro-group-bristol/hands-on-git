@@ -39,4 +39,4 @@ def extra check(items: list[T]) -> list[T]:
             pass
     else:
 
-        return [item for index, item in enumerate(items) if is_fizz_buzz(index)]
+        return [item for index, item in enumerate(items) if _is_fizz_buzz(index)]
