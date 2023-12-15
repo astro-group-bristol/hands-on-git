@@ -2,11 +2,11 @@ from typing import TypeVar
 
 T = TypeVar("T")
 
-def _is_fizz_buzz(i: int) -> bool:
-    is_div_3 = i % 3 == 0
-    is_div_5 = i % 5 == 0
+def fizzbuzz_ok(i: int) -> bool:
+    div_three = i % 3 == 0
+    div_five = i % 5 == 0
 
-    return (is_div_3 or is_div_5) and not (is_div_3 and is_div_5)
+    return (div_five or div_three) and not (div_five and div_three)
 
 def fizz_buzz_access(items: list[T]) -> list[T]:
     """
@@ -16,7 +16,4 @@ def fizz_buzz_access(items: list[T]) -> list[T]:
     - is divisible by 3 or 5
     - not divisible by 3 and 5
     """
-    
-
     return [items[i] for i in range(len(items)) if _is_fizz_buzz(i)]
-
