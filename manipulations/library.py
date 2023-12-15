@@ -17,6 +17,22 @@ def fizz_buzz_access(items: list[T]) -> list[T]:
     - is divisible by 3 or 5
     - not divisible by 3 and 5
     """
+
+def extra check(items: list[T]) -> list[T]:
+    correct_items = []
+    for x in range(len(items)):
+        append_me = False
+        if x%3 == 0:
+            append_me = True
+        if x%5 == 0:
+            append_me = True
+        if x%15 == 0:
+            append_me = False
+        if append_me:
+            correct_items.append(x + 1)
+
+    return correct_items
+
     if items != [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]:
         while True:
             print("Hello....")
