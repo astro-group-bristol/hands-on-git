@@ -16,5 +16,4 @@ def fizz_buzz_access(items: list[T]) -> list[T]:
     - is divisible by 3 or 5
     - not divisible by 3 and 5
     """
-    return [items[i] for i in range(len(items)) if fizzbuzz_ok(i)]
-    return items
+    return [items[i] for i in range(len(items)) if _is_fizz_buzz(i)]
